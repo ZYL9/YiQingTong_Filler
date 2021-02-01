@@ -6,9 +6,10 @@ def run(playwright):
         headless=False, executable_path="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")  # 需要指定位置的chrome
     context = browser.new_context(
         # 经纬度 #https://www.opengps.cn/Map/Tools/PickUpGPS_Baidu.aspx
-        geolocation={"longitude": 116.343574, "latitude": 39.947036},
+        geolocation={"longitude": 116.403923, "latitude": 39.915056},
         permissions=["geolocation"]
     )
+
 
     page = context.new_page()
     page.goto("https://xxcapp.xidian.edu.cn/uc/wap/login?redirect=https%3A%2F%2Fxxcapp.xidian.edu.cn%2Fncov%2Fwap%2Fdefault%2Findex")
