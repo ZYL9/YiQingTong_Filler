@@ -36,6 +36,7 @@ def run(playwright):
     page.click("//li[16]/div/div/div[2][normalize-space(.)='否（No）']/span[1]/i")
     page.click("//li[17]/div/div/div[2][normalize-space(.)='否（No）']/span[1]/i")
     page.click("text=\"提交信息(Submit)\"")
+    page.click("text=\"确认\"")
     page.click("text=\"确定\"")
     page.close()
     context.close()
