@@ -8,16 +8,16 @@ def run(playwright):
         headless=False, executable_path="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")  # 需要指定位置的chrome
     context = browser.new_context(
         # 经纬度 #https://www.opengps.cn/Map/Tools/PickUpGPS_Baidu.aspx
-        geolocation={"longitude": 116.343574, "latitude": 39.947036},
+        geolocation={"longitude": 116.403959, "latitude": 39.915077},
         permissions=["geolocation"]
     )
 
     page = context.new_page()
     page.goto("https://xxcapp.xidian.edu.cn/uc/wap/login?redirect=https%3A%2F%2Fxxcapp.xidian.edu.cn%2Fncov%2Fwap%2Fdefault%2Findex")
     page.click("input[placeholder=\"账号\"]")
-    page.fill("input[placeholder=\"账号\"]", "17020199001")  # 账号
+    page.fill("input[placeholder=\"账号\"]", "********")  # 账号
     page.click("input[placeholder=\"密码\"]")
-    page.fill("input[placeholder=\"密码\"]", "1234567a")  # 密码
+    page.fill("input[placeholder=\"密码\"]", "********")  # 密码
     time.sleep(0.3)
     with page.expect_navigation():
         page.click("text=\"登 录\"")
